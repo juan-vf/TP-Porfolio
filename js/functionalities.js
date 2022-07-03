@@ -226,7 +226,7 @@ function Func_ej7(){
   };
 
 //Ejercicio 8//
-  function esPrimoLimit(){
+  /*function esPrimoLimit(){
     let Ej8_nP = document.getElementById('Ej8_LimiP').value;
 
     for(let num = 2; num <= Ej8_nP ; num++){
@@ -249,13 +249,54 @@ function Func_ej7(){
     }
 
 
-};
+};*/
 
 function Func_ej8(){
     let Ej8_nP = document.getElementById('Ej8_LimiP').value;
 
+    let listP = [];
+    let listP2 = ' ';
+    let primo = true;
+
+    /*for(let i = 2; i < Ej8_nP; i++){
+        if(i % i && i % 1 === 1 || i){
+            listP.push(i)
+            //listP2 += i + ' ';
+            //console.log(i)
+        }
+        //console.log(listP2)
+        //console.log(listP)
+    };*/
+    //document.getElementById('NumPri').innerHTML = ("hola!" + listP + listP2)
 
 
+    for (let i = 2; i < Ej8_nP; i++) {
+      if (esPrimo(i)=== true){
+        console.log(i)
+        listP.push(i)
+      }
+
+      
+    }
+    console.log(listP)
+    document.getElementById('NumPri').innerHTML = ("Los numeros primos hasta " + Ej8_nP +" son: " + listP)
+
+
+    function esPrimo(num){
+
+      for(var d=2;d<=num-1;d++) {
+      
+      if(num%d==0) {
+      
+      return false;
+      
+      }
+      
+      }
+      
+      return true;
+      
+    }
 
 };
 
