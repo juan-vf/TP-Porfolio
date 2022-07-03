@@ -176,6 +176,37 @@ function Func_ej6(){
 function Func_ej7(){
   let Ej7_number1 = document.getElementById('Ej7_num1').value;
   let Ej7_number2 = document.getElementById('Ej7_num2').value;
+  
+  //let listMul3 = ' ';
+  let list = [];
+  
+  for(var i = Ej7_number1 ; i <= Ej7_number2 ; i++)
+        {
+            if( i % 3 === 0){
+              //listMul3 += i + ' ';
+              list.push(i + " ");
+              console.log (i);
+            }
+               
+        }
+        //console.log (listMul3)
+
+  /*function multiple(valor, multiple)
+        {
+            resto = valor % multiple;
+            if(resto==0)
+                return valor;
+            else
+                return false;
+        };*/
+
+  
+ 
+        // bucle del input 1 a input 2
+        
+        
+        document.getElementById('Ej7_res').innerHTML = ("Los multplos de 3 entre " + Ej7_number1 + " y " + Ej7_number2 + " son: " + list);
+        
 
 
   /*if (Ej7_number1 < Ej7_number2 && Ej7_number1>0){
@@ -250,7 +281,7 @@ let texto = '';
 
 //let numer = (Ent01 + 1);
 
-  for(let i = Ent01 ; i < Ent02; i++){
+  for(let i = (Ent01 + 1) ; i < Ent02; i++){
     
     texto += i + ' '
     console.log(i)
