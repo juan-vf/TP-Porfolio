@@ -278,16 +278,19 @@ function FuncEj10(){
   let Ent02 = document.getElementById('Ej10_num2').value;
 
 let texto = '';
+let list = [];
+//console.log(Ent011)
 
 //let numer = (Ent01 + 1);
 
-  for(let i = (Ent01 + 1) ; i < Ent02; i++){
-    
+  for(let i = Ent01 ; i < Ent02; i++){
     texto += i + ' '
+    list.push(i + " ")
     console.log(i)
   };
+  list.shift()
 
-  document.getElementById('res10').innerHTML = ("Los numeros comprendidos entre "+ Ent01 + " y "+ Ent02 + " son:"+ texto);
+  document.getElementById('res10').innerHTML = ("Los numeros comprendidos entre "+ Ent01 + " y "+ Ent02 + " son:"+ list);
 };
 
 
